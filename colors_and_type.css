@@ -1,0 +1,230 @@
+/* ============================================================
+   Sistema de Ilhas — Design System Tokens
+   Sky-blue archipelago + warm coral accents + heavily rounded
+   floating panels. Import in any artifact.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body:    "Inter", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ---------- SKY (background) ---------- */
+  --sky-50:  #f0f9ff;
+  --sky-100: #e0f2fe;
+  --sky-200: #bae6fd;
+  --sky-300: #7dd3fc;
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+  --sky-600: #0284c7;
+  --sky-700: #0369a1;
+  --sky-800: #075985;
+  --sky-900: #0c4a6e;
+
+  /* ---------- INK (text on light) ---------- */
+  --ink-1:       #0c1f3a;            /* body, strong */
+  --ink-2:       #334e74;            /* secondary */
+  --ink-3:       #64748b;            /* tertiary */
+  --ink-soft:    rgba(12, 31, 58, 0.55); /* placeholders, labels */
+  --ink-faint:   rgba(12, 31, 58, 0.35);
+  --ink-inverse: #ffffff;            /* on coral / on photos */
+
+  /* ---------- CORAL / SOL (warm accent) ---------- */
+  --coral-50:  #fff7ed;
+  --coral-100: #ffedd5;
+  --coral-200: #fed7aa;
+  --coral-300: #fdba74;
+  --coral-400: #fb923c;  /* hover */
+  --coral-500: #f97316;  /* primary */
+  --coral-600: #ea580c;  /* press */
+  --coral-700: #c2410c;
+
+  /* ---------- ISLAND TINTS ---------- */
+  --tint-bruna:      #a78bfa;  /* origin — violet */
+  --tint-design:     #22d3ee;  /* turquoise */
+  --tint-dev-a:      #3b82f6;  /* royal blue */
+  --tint-dev-b:      #6366f1;  /* indigo */
+  --tint-integracao: #f59e0b;  /* amber */
+
+  /* ---------- SEMANTIC ---------- */
+  --success:        #10b981;
+  --success-soft:   rgba(16, 185, 129, 0.18);
+  --danger:         #ef4444;
+  --danger-soft:    rgba(239, 68, 68, 0.10);
+  --warn:           #f59e0b;
+  --warn-soft:      rgba(245, 158, 11, 0.18);
+  --pending:        #94a3b8;
+  --pending-soft:   rgba(148, 163, 184, 0.22);
+  --active:         var(--coral-500);
+  --active-soft:    rgba(249, 115, 22, 0.18);
+
+  /* ---------- SURFACES ---------- */
+  --bg:               #dbeafe; /* fallback if gradient fails */
+  --bg-gradient:
+    radial-gradient(at 12% 18%, rgba(255, 255, 255, 0.7) 0px, transparent 45%),
+    radial-gradient(at 82% 30%, rgba(186, 230, 253, 0.55) 0px, transparent 50%),
+    radial-gradient(at 18% 88%, rgba(255, 255, 255, 0.55) 0px, transparent 45%),
+    radial-gradient(at 88% 78%, rgba(125, 211, 252, 0.45) 0px, transparent 55%),
+    linear-gradient(180deg, #dbeafe 0%, #bae6fd 55%, #e0f2fe 100%);
+
+  --glass:        rgba(255, 255, 255, 0.55);
+  --glass-strong: rgba(255, 255, 255, 0.72);
+  --glass-soft:   rgba(255, 255, 255, 0.38);
+  --glass-stroke: rgba(255, 255, 255, 0.85);
+  --glass-edge:   rgba(7, 89, 133, 0.10);
+
+  /* ---------- RADII ---------- */
+  --radius-pill: 999px;
+  --radius-sm:   14px;
+  --radius-md:   22px;
+  --radius-lg:   28px;
+  --radius-xl:   36px;  /* floating windows */
+
+  /* ---------- SHADOWS (sky-tinted, never neutral black) ---------- */
+  --shadow-sm:    0 4px 12px -2px rgba(7, 89, 133, 0.12);
+  --shadow-md:    0 12px 28px -8px rgba(7, 89, 133, 0.18);
+  --shadow-lg:    0 24px 60px -20px rgba(7, 89, 133, 0.25);
+  --shadow-xl:    0 40px 100px -30px rgba(7, 89, 133, 0.32);
+  --shadow-coral: 0 12px 28px -8px rgba(249, 115, 22, 0.45);
+  --inset-top:    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --inset-bottom: inset 0 -1px 0 rgba(7, 89, 133, 0.06);
+
+  /* ---------- SPACING (4px base) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 22px;
+  --space-6: 28px;
+  --space-7: 36px;
+  --space-8: 48px;
+  --space-9: 64px;
+
+  /* ---------- TYPE SCALE ---------- */
+  --fs-micro:   11px;  /* uppercase labels */
+  --fs-caption: 12px;
+  --fs-body:    14px;
+  --fs-emphasis:16px;
+  --fs-h3:      18px;
+  --fs-h2:      22px;
+  --fs-h1:      26px;
+  --fs-hero:    34px;
+  --fs-display: 44px;
+
+  --lh-tight: 1.15;
+  --lh-snug:  1.3;
+  --lh-base:  1.5;
+
+  --ls-micro: 0.10em;  /* uppercase microcopy */
+  --ls-tight: -0.01em; /* large headings */
+  --ls-base:  0;
+
+  /* ---------- MOTION ---------- */
+  --ease-soft:    cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out:  cubic-bezier(0.45, 0, 0.55, 1);
+  --dur-fast:     120ms;
+  --dur-base:     180ms;
+  --dur-slow:     250ms;
+  --dur-float:    7s;
+}
+
+/* ============================================================
+   SEMANTIC TYPOGRAPHY — use these in component CSS
+   ============================================================ */
+
+.ds-h1, h1.ds {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--ink-1);
+  margin: 0;
+}
+
+.ds-h2, h2.ds {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--ink-1);
+  margin: 0;
+}
+
+.ds-h3, h3.ds {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  color: var(--ink-1);
+  margin: 0;
+}
+
+.ds-hero {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.015em;
+  color: var(--ink-1);
+}
+
+.ds-body, p.ds {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-base);
+  color: var(--ink-1);
+  margin: 0;
+}
+
+.ds-caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  line-height: var(--lh-base);
+  color: var(--ink-2);
+}
+
+.ds-micro {
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-micro);
+  color: var(--ink-soft);
+}
+
+.ds-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  color: var(--ink-2);
+}
+
+/* ============================================================
+   STATUS PILL — semantic colors as small chips
+   ============================================================ */
+
+.ds-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--pending-soft);
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.ds-pill--ativa     { background: var(--active-soft);  color: var(--coral-700); }
+.ds-pill--concluida { background: var(--success-soft); color: #0a8a64; }
+.ds-pill--pendente  { background: var(--pending-soft); color: var(--ink-2); }
+.ds-pill--design    { background: rgba(34, 211, 238, 0.18); color: #0e7490; }
+.ds-pill--dev       { background: rgba(59, 130, 246, 0.18); color: #1d4ed8; }
+.ds-pill--integracao{ background: rgba(245, 158, 11, 0.18); color: #b45309; }
+.ds-pill--bruna     { background: rgba(167, 139, 250, 0.20); color: #6d28d9; }

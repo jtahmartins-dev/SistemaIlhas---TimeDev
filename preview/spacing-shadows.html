@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 32px 28px; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; align-items: end; }
+  .ele { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .chip { width: 92px; height: 64px; background: #ffffff; border-radius: 22px; border: 1px solid var(--glass-stroke); }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); text-align: center; }
+  .name { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: var(--ink-1); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="ele"><div class="chip" style="box-shadow:var(--shadow-sm)"></div><div class="name">sm</div><div class="meta">0 4px 12px<br>rgba(7,89,133,.12)</div></div>
+    <div class="ele"><div class="chip" style="box-shadow:var(--shadow-md)"></div><div class="name">md</div><div class="meta">0 12px 28px<br>rgba(7,89,133,.18)</div></div>
+    <div class="ele"><div class="chip" style="box-shadow:var(--shadow-lg)"></div><div class="name">lg</div><div class="meta">0 24px 60px<br>rgba(7,89,133,.25)</div></div>
+    <div class="ele"><div class="chip" style="box-shadow:var(--shadow-xl)"></div><div class="name">xl</div><div class="meta">0 40px 100px<br>rgba(7,89,133,.32)</div></div>
+    <div class="ele"><div class="chip" style="background:#f97316; box-shadow:var(--shadow-coral)"></div><div class="name">coral</div><div class="meta">0 12px 28px<br>rgba(249,115,22,.45)</div></div>
+  </div>
+</div>
+</body>
+</html>

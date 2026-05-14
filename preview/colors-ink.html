@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 26px 28px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .ink { padding: 14px 16px; border-radius: 18px; background: rgba(255,255,255,0.7); border: 1px solid var(--glass-stroke); display: flex; flex-direction: column; gap: 4px; }
+  .ink .swatch { width: 38px; height: 38px; border-radius: 12px; box-shadow: var(--shadow-sm), var(--inset-top); }
+  .ink .name { font-family: var(--font-body); font-size: 12px; font-weight: 600; }
+  .ink .hex { font-family: var(--font-mono); font-size: 10px; }
+  .ink .sample { font-family: var(--font-body); font-size: 13px; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="ink">
+      <div class="swatch" style="background:#0c1f3a"></div>
+      <div class="name" style="color:#0c1f3a">ink-1 / body</div>
+      <div class="hex" style="color:var(--ink-3)">#0c1f3a</div>
+      <div class="sample" style="color:#0c1f3a">Aa — texto principal</div>
+    </div>
+    <div class="ink">
+      <div class="swatch" style="background:#334e74"></div>
+      <div class="name" style="color:#334e74">ink-2 / secundário</div>
+      <div class="hex" style="color:var(--ink-3)">#334e74</div>
+      <div class="sample" style="color:#334e74">Aa — subtítulos</div>
+    </div>
+    <div class="ink">
+      <div class="swatch" style="background:#64748b"></div>
+      <div class="name" style="color:#64748b">ink-3 / terciário</div>
+      <div class="hex" style="color:var(--ink-3)">#64748b</div>
+      <div class="sample" style="color:#64748b">Aa — captions</div>
+    </div>
+    <div class="ink">
+      <div class="swatch" style="background:rgba(12,31,58,0.55)"></div>
+      <div class="name" style="color:rgba(12,31,58,0.7)">ink-soft</div>
+      <div class="hex" style="color:var(--ink-3)">rgba 12,31,58 / .55</div>
+      <div class="sample" style="color:rgba(12,31,58,0.55)">Aa — placeholders</div>
+    </div>
+    <div class="ink">
+      <div class="swatch" style="background:rgba(12,31,58,0.35)"></div>
+      <div class="name" style="color:rgba(12,31,58,0.7)">ink-faint</div>
+      <div class="hex" style="color:var(--ink-3)">rgba 12,31,58 / .35</div>
+      <div class="sample" style="color:rgba(12,31,58,0.35)">Aa — empty states</div>
+    </div>
+    <div class="ink" style="background: #0c1f3a;">
+      <div class="swatch" style="background:#fff"></div>
+      <div class="name" style="color:#fff">ink-inverse</div>
+      <div class="hex" style="color:rgba(255,255,255,0.6)">#ffffff</div>
+      <div class="sample" style="color:#fff">Aa — sobre coral / fotos</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

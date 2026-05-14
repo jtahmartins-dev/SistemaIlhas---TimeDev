@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 24px 28px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .sem { padding: 12px 14px; border-radius: 16px; background: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 10px; box-shadow: var(--shadow-sm); border: 1px solid var(--glass-stroke); }
+  .sem .bar { width: 6px; height: 28px; border-radius: 999px; }
+  .sem .name { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: var(--ink-1); }
+  .sem .hex { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); }
+  .pill-row { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="sem"><div class="bar" style="background:#f97316"></div><div><div class="name">ativa</div><div class="hex">coral · #f97316</div></div></div>
+    <div class="sem"><div class="bar" style="background:#10b981"></div><div><div class="name">concluída</div><div class="hex">success · #10b981</div></div></div>
+    <div class="sem"><div class="bar" style="background:#94a3b8"></div><div><div class="name">pendente</div><div class="hex">pending · #94a3b8</div></div></div>
+    <div class="sem"><div class="bar" style="background:#ef4444"></div><div><div class="name">erro</div><div class="hex">danger · #ef4444</div></div></div>
+  </div>
+  <div class="pill-row">
+    <span class="ds-pill ds-pill--ativa">em andamento</span>
+    <span class="ds-pill ds-pill--concluida">concluída</span>
+    <span class="ds-pill ds-pill--pendente">aguardando</span>
+    <span class="ds-pill ds-pill--bruna">bruna</span>
+    <span class="ds-pill ds-pill--design">design</span>
+    <span class="ds-pill ds-pill--dev">dev</span>
+    <span class="ds-pill ds-pill--integracao">integração</span>
+  </div>
+</div>
+</body>
+</html>

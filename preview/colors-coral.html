@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 24px 28px; }
+  .scale { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; }
+  .sw { aspect-ratio: 1; border-radius: 14px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; color: #fff; font-family: var(--font-body); font-size: 10px; font-weight: 600; box-shadow: var(--shadow-sm); }
+  .sw.light { color: var(--ink-1); }
+  .sw .hex { opacity: 0.65; font-family: var(--font-mono); font-weight: 500; font-size: 9px; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="scale">
+    <div class="sw" style="background:#fff7ed; color:var(--ink-1)" class="light">50<span class="hex">fff7ed</span></div>
+    <div class="sw light" style="background:#ffedd5">100<span class="hex">ffedd5</span></div>
+    <div class="sw light" style="background:#fed7aa">200<span class="hex">fed7aa</span></div>
+    <div class="sw light" style="background:#fdba74">300<span class="hex">fdba74</span></div>
+    <div class="sw" style="background:#fb923c">400 hover<span class="hex">fb923c</span></div>
+    <div class="sw" style="background:#f97316; box-shadow:var(--shadow-coral)">500 ★<span class="hex">f97316</span></div>
+    <div class="sw" style="background:#ea580c">600 press<span class="hex">ea580c</span></div>
+    <div class="sw" style="background:#c2410c">700<span class="hex">c2410c</span></div>
+  </div>
+</div>
+</body>
+</html>

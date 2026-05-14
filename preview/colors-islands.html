@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 26px 28px; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .tint { border-radius: 22px; padding: 14px 16px 18px; background: rgba(255,255,255,0.7); border: 1px solid var(--glass-stroke); display: flex; flex-direction: column; align-items: flex-start; gap: 6px; box-shadow: var(--shadow-sm); }
+  .tint .dot { width: 44px; height: 44px; border-radius: 50%; box-shadow: 0 4px 14px -2px currentColor; }
+  .tint .name { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--ink-1); }
+  .tint .hex { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="tint"><div class="dot" style="background:#a78bfa; color:#a78bfa"></div><div class="name">Bruna</div><div class="hex">#a78bfa</div></div>
+    <div class="tint"><div class="dot" style="background:#22d3ee; color:#22d3ee"></div><div class="name">Design</div><div class="hex">#22d3ee</div></div>
+    <div class="tint"><div class="dot" style="background:#3b82f6; color:#3b82f6"></div><div class="name">Dev A</div><div class="hex">#3b82f6</div></div>
+    <div class="tint"><div class="dot" style="background:#6366f1; color:#6366f1"></div><div class="name">Dev B</div><div class="hex">#6366f1</div></div>
+    <div class="tint"><div class="dot" style="background:#f59e0b; color:#f59e0b"></div><div class="name">Integração</div><div class="hex">#f59e0b</div></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 28px 28px 32px; display: flex; gap: 30px; align-items: flex-start; }
+  .col { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+  .label { font-family: var(--font-body); font-size: 10px; font-weight: 600; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,0.7); border: 1px solid var(--glass-stroke); font-family: var(--font-body); font-size: 12px; color: var(--ink-1); margin-right: 6px; margin-bottom: 6px; }
+  .chip .role { color: var(--ink-3); font-size: 10.5px; }
+  .pop { width: 240px; padding: 14px; border-radius: 22px; background: rgba(255,255,255,0.85); border: 1px solid var(--glass-stroke); box-shadow: var(--shadow-md); }
+  .pop h4 { margin: 0 0 10px; font-family: var(--font-body); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); font-weight: 700; }
+  .pop ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .pop li { display: flex; justify-content: space-between; font-family: var(--font-body); font-size: 12px; color: var(--ink-1); }
+  .pop .role { color: var(--ink-3); font-size: 10.5px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="col">
+    <div class="label">Member chips (em modal)</div>
+    <div>
+      <span class="chip"><strong>Marina</strong><span class="role">· Líder de Design</span></span>
+      <span class="chip"><strong>João</strong><span class="role">· Designer</span></span>
+      <span class="chip"><strong>Ana</strong><span class="role">· Designer</span></span>
+    </div>
+  </div>
+  <div class="col" style="max-width:260px;">
+    <div class="label">Hover popover</div>
+    <div class="pop">
+      <h4>Ilha Dev A</h4>
+      <ul>
+        <li><span>Carlos Andrade</span><span class="role">Experiente</span></li>
+        <li><span>Júlia Castro</span><span class="role">Aprendiz</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

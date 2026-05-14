@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 24px 26px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--ink-2); background: rgba(255,255,255,0.7); border: 1px solid var(--glass-stroke); cursor: pointer; transition: all 180ms cubic-bezier(0.2,0.8,0.2,1); }
+  .chip:hover { background: rgba(255,255,255,0.9); color: var(--ink-1); transform: translateY(-1px); }
+  .chip.active { background: linear-gradient(135deg, #f97316, #fb923c); color: #fff; border-color: transparent; box-shadow: 0 6px 20px -4px rgba(249,115,22,0.5); }
+  .chip-del { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; margin-left: 2px; border: none; background: rgba(255,255,255,0.6); color: var(--ink-2); border-radius: 50%; font-size: 14px; cursor: pointer; }
+  .chip.active .chip-del { background: rgba(255,255,255,0.3); color: #fff; }
+  .pill { font-family: var(--font-body); font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .label { margin-bottom: 8px; font-family: var(--font-body); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">Demanda chips · ativa = coral gradient</div>
+  <div class="row">
+    <span class="chip active">Visão geral</span>
+    <span class="chip">Login social <span class="pill" style="background:rgba(34,211,238,0.18); color:#0e7490;">design</span><button class="chip-del">×</button></span>
+    <span class="chip">Modal de filtros <span class="pill" style="background:rgba(59,130,246,0.18); color:#1d4ed8;">dev</span><button class="chip-del">×</button></span>
+    <span class="chip">Onboarding mobile <span class="pill" style="background:rgba(245,158,11,0.18); color:#b45309;">integração</span><button class="chip-del">×</button></span>
+    <span class="chip">Pagamento boleto <span class="pill" style="background:rgba(16,185,129,0.28); color:#0a8a64;">concluida</span></span>
+  </div>
+</div>
+</body>
+</html>

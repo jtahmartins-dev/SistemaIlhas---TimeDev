@@ -1,0 +1,65 @@
+/* Preview card scaffold — used by every card in preview/ */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  color: var(--ink-1);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  width: 700px;
+  padding: 22px 26px;
+  background: var(--bg-gradient);
+  background-color: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-flat {
+  background: #ffffff;
+}
+
+.card-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.card-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+}
+
+/* The glass surface, as used throughout the product */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid var(--glass-stroke);
+  box-shadow: var(--shadow-lg), var(--inset-top);
+  border-radius: var(--radius-lg);
+}
+.glass-xl {
+  background: var(--glass-strong);
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  border: 1px solid var(--glass-stroke);
+  box-shadow: var(--shadow-xl), var(--inset-top);
+  border-radius: var(--radius-xl);
+}

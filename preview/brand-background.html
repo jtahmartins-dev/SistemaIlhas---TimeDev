@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 0; height: 200px; }
+  .sky { width: 100%; height: 100%; background:
+    radial-gradient(at 12% 18%, rgba(255, 255, 255, 0.7) 0px, transparent 45%),
+    radial-gradient(at 82% 30%, rgba(186, 230, 253, 0.55) 0px, transparent 50%),
+    radial-gradient(at 18% 88%, rgba(255, 255, 255, 0.55) 0px, transparent 45%),
+    radial-gradient(at 88% 78%, rgba(125, 211, 252, 0.45) 0px, transparent 55%),
+    linear-gradient(180deg, #dbeafe 0%, #bae6fd 55%, #e0f2fe 100%);
+    display: flex; align-items: center; justify-content: center; }
+  .badge { padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,0.65); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); border: 1px solid rgba(255,255,255,0.85); font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--ink-1); box-shadow: var(--shadow-md); letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="sky"><div class="badge">Fundo: gradient diurno + nuvens (sem estrelas)</div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 26px; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-items: end; }
+  .corner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .box { width: 100%; aspect-ratio: 1; background: rgba(255,255,255,0.85); border: 1px solid var(--glass-stroke); box-shadow: var(--shadow-md), var(--inset-top); }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); }
+  .name { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: var(--ink-1); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="corner"><div class="box" style="border-radius:999px"></div><div class="name">pill</div><div class="meta">999px</div></div>
+    <div class="corner"><div class="box" style="border-radius:14px"></div><div class="name">sm</div><div class="meta">14px · inputs</div></div>
+    <div class="corner"><div class="box" style="border-radius:22px"></div><div class="name">md</div><div class="meta">22px · botões</div></div>
+    <div class="corner"><div class="box" style="border-radius:28px"></div><div class="name">lg</div><div class="meta">28px · cards</div></div>
+    <div class="corner"><div class="box" style="border-radius:36px"></div><div class="name">xl ★</div><div class="meta">36px · modais</div></div>
+  </div>
+</div>
+</body>
+</html>

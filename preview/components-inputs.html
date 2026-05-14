@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 24px 28px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.08em; }
+  .field input, .field textarea, .field select { font-family: var(--font-body); font-size: 14px; color: var(--ink-1); padding: 10px 14px; border-radius: 14px; border: 1px solid rgba(7,89,133,0.15); background: rgba(255,255,255,0.85); outline: none; }
+  .field input::placeholder, .field textarea::placeholder { color: var(--ink-soft); }
+  .field.focus input { border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.25); background: #fff; }
+  .field textarea { min-height: 60px; resize: none; }
+  .field select { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path fill='%23334e74' d='M2 4l4 4 4-4z'/></svg>"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 32px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="field">
+      <label>Título</label>
+      <input value="Login social com Google" />
+    </div>
+    <div class="field focus">
+      <label>E-mail (foco)</label>
+      <input value="bruna@" />
+    </div>
+    <div class="field">
+      <label>Função</label>
+      <select><option>Designer</option></select>
+    </div>
+    <div class="field">
+      <label>Ilha</label>
+      <select><option>Ilha Design</option></select>
+    </div>
+    <div class="field" style="grid-column: 1 / -1;">
+      <label>Descrição</label>
+      <textarea placeholder="Conte rapidamente o que precisa…"></textarea>
+    </div>
+  </div>
+</div>
+</body>
+</html>

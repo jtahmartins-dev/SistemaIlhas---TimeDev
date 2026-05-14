@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 24px 28px; }
+  .scale { display: grid; grid-template-columns: repeat(10, 1fr); gap: 8px; }
+  .sw { aspect-ratio: 1; border-radius: 14px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; color: var(--ink-1); font-family: var(--font-body); font-size: 10px; font-weight: 600; box-shadow: var(--shadow-sm), var(--inset-top); }
+  .sw.dark { color: #fff; }
+  .sw .hex { opacity: 0.65; font-family: var(--font-mono); font-weight: 500; font-size: 9px; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="scale">
+    <div class="sw" style="background:#f0f9ff">50<span class="hex">f0f9ff</span></div>
+    <div class="sw" style="background:#e0f2fe">100<span class="hex">e0f2fe</span></div>
+    <div class="sw" style="background:#bae6fd">200<span class="hex">bae6fd</span></div>
+    <div class="sw" style="background:#7dd3fc">300<span class="hex">7dd3fc</span></div>
+    <div class="sw" style="background:#38bdf8">400<span class="hex">38bdf8</span></div>
+    <div class="sw dark" style="background:#0ea5e9">500<span class="hex">0ea5e9</span></div>
+    <div class="sw dark" style="background:#0284c7">600<span class="hex">0284c7</span></div>
+    <div class="sw dark" style="background:#0369a1">700<span class="hex">0369a1</span></div>
+    <div class="sw dark" style="background:#075985">800<span class="hex">075985</span></div>
+    <div class="sw dark" style="background:#0c4a6e">900<span class="hex">0c4a6e</span></div>
+  </div>
+</div>
+</body>
+</html>

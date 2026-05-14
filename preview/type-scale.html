@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 26px; }
+  .label { margin-bottom: 10px; }
+  .scale { display: flex; flex-direction: column; gap: 4px; }
+  .row { display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: baseline; padding: 4px 0; border-bottom: 1px dashed var(--glass-edge); }
+  .row:last-child { border-bottom: none; }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); }
+  .sample { font-family: var(--font-display); color: var(--ink-1); letter-spacing: -0.01em; line-height: 1.1; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">Type scale</div>
+  <div class="scale">
+    <div class="row"><span class="meta">display · 44</span><span class="sample" style="font-size:34px; font-weight:800;">Sistema de Ilhas</span></div>
+    <div class="row"><span class="meta">hero · 34</span><span class="sample" style="font-size:26px; font-weight:700;">Arquipélago</span></div>
+    <div class="row"><span class="meta">h1 · 26</span><span class="sample" style="font-size:22px; font-weight:700;">Nova demanda</span></div>
+    <div class="row"><span class="meta">h2 · 22</span><span class="sample" style="font-size:18px; font-weight:600;">Pessoas atribuídas</span></div>
+    <div class="row"><span class="meta">body · 14</span><span class="sample" style="font-family:var(--font-body); font-size:14px;">Concluir e passar adiante.</span></div>
+    <div class="row"><span class="meta">caption · 12</span><span class="sample" style="font-family:var(--font-body); font-size:12px; color:var(--ink-2);">Apenas membros desta ilha podem dar check-in.</span></div>
+    <div class="row"><span class="meta">micro · 11</span><span class="sample" style="font-family:var(--font-body); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-soft);">DEMANDAS</span></div>
+  </div>
+</div>
+</body>
+</html>
