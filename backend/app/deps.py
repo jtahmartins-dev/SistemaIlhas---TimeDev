@@ -31,11 +31,19 @@ def get_current_user(
 
 def require_roles(*roles: Role):
     def checker(user: User = Depends(get_current_user)) -> User:
+        if user.is_admin:
+            return user
         if user.role not in roles:
             raise HTTPException(
                 status_code=403,
-                detail=f"Apenas {', '.join(r.value for r in roles)} podem fazer isso.",
+                detail=f"Apenas {', '.join(r.value for r in roles)} (ou admin) podem fazer isso.",
             )
         return user
 
     return checker
+
+
+def require_admin(user: User = Depends(get_current_user)) -> User:
+    if not user.is_admin:
+        raise HTTPException(status_code=403, detail="Apenas admins podem fazer isso.")
+    return user

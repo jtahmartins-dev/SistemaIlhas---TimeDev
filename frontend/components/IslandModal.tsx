@@ -107,6 +107,7 @@ export default function IslandModal({
               {ilha.membros.map((m) => (
                 <li key={m.id} className="member-chip">
                   <strong>{m.nome}</strong>
+                  {m.is_admin && <span className="admin-pill">admin</span>}
                   <span className="muted" style={{ fontSize: 11 }}>
                     · {ROLE_LABEL[m.role]}
                   </span>

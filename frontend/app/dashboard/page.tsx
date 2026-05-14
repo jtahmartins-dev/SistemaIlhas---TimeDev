@@ -96,7 +96,7 @@ export default function Dashboard() {
 
   const handleCreateDemanda = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (user?.role !== "bruna") return;
+    if (!user || (user.role !== "bruna" && !user.is_admin)) return;
     setCriando(true);
     setErro(null);
     try {
@@ -149,7 +149,10 @@ export default function Dashboard() {
   const ilhaAberta = openIlha ? ilhaPorSlug(openIlha) : null;
   const etapaAberta = openIlha ? etapaPorSlug.get(openIlha) ?? null : null;
   const podeCheckIn =
-    openIlha != null && user && ROLES_POR_ILHA[openIlha].includes(user.role);
+    openIlha != null &&
+    user &&
+    (user.is_admin || ROLES_POR_ILHA[openIlha].includes(user.role));
+  const podeGerenciarDemandas = user.role === "bruna" || user.is_admin;
 
   return (
     <div className="page">
@@ -194,7 +197,7 @@ export default function Dashboard() {
                 >
                   {d.titulo}
                   <span className={statusPillClass(d.status_atual)}>{d.status_atual}</span>
-                  {user.role === "bruna" && !isMobile && (
+                  {podeGerenciarDemandas && !isMobile && (
                     <button
                       type="button"
                       className="chip-del"
@@ -210,7 +213,7 @@ export default function Dashboard() {
           )}
         </div>
 
-        {user.role === "bruna" && !isMobile && (
+        {podeGerenciarDemandas && !isMobile && (
           <div className="glass nova-demanda">
             <h3>Nova demanda</h3>
             {!showNovaForm ? (

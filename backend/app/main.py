@@ -6,6 +6,7 @@ from fastapi.staticfiles import StaticFiles
 
 from .config import settings
 from .database import Base, engine
+from .migrations import bootstrap_admin_por_email, garantir_coluna_is_admin
 from .routers import anexos, auth, demandas, ilhas, users
 from .seed import seed_ilhas
 
@@ -23,8 +24,10 @@ app.add_middleware(
 @app.on_event("startup")
 def startup():
     Base.metadata.create_all(bind=engine)
+    garantir_coluna_is_admin()
     os.makedirs(settings.upload_dir, exist_ok=True)
     seed_ilhas()
+    bootstrap_admin_por_email()
 
 
 app.mount("/uploads", StaticFiles(directory=settings.upload_dir), name="uploads")

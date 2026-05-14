@@ -115,7 +115,7 @@ def check_in(
         raise HTTPException(status_code=400, detail="Slug de ilha inválido.")
 
     permitidos = ROLES_POR_ILHA[slug]
-    if user.role not in permitidos:
+    if not user.is_admin and user.role not in permitidos:
         raise HTTPException(
             status_code=403,
             detail=f"Sua role ({user.role.value}) não pode dar check-in nessa ilha.",

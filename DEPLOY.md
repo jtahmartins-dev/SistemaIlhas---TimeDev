@@ -70,6 +70,31 @@ O frontend agora tá num domínio (`*.vercel.app`) diferente do backend (`*.onre
 
 ---
 
+## Passo 4 — Virar admin (opcional, mas útil)
+
+Admins ficam visíveis em **todas as ilhas**, podem **criar/apagar demandas** e dar **check-in em qualquer etapa** (mesmo sem ser daquela role). Pensado pra você (dev / dono do projeto) supervisionar tudo.
+
+Pra promover você mesmo a admin:
+
+1. Garanta que **você já se cadastrou** no site (com o e-mail que você quer usar).
+2. No Render → serviço `sistema-ilhas-api` → **Environment**:
+   - Clica em **Add Environment Variable**
+   - **Key**: `ADMIN_BOOTSTRAP_EMAIL`
+   - **Value**: seu e-mail (o mesmo do cadastro). Ex: `joao.h.martins8@aluno.senai.br`
+3. **Save Changes** → o backend reinicia (~30s) e te promove a admin no startup.
+4. **Faça logout e login de novo** no site pra atualizar o token com a flag `is_admin`.
+
+Depois disso você vai aparecer em todas as ilhas (com a pillzinha "★ admin" do lado do nome), o formulário "Nova demanda" fica liberado e o botão de apagar (×) aparece em cada chip.
+
+Pra promover **outros usuários** depois (sem precisar mexer em env var), use o endpoint:
+```
+POST /users/{user_id}/promote
+POST /users/{user_id}/demote
+```
+Só admins podem chamar. Dá pra testar pelo Swagger em `/docs`.
+
+---
+
 ## Pronto
 
 Acessa a URL do Vercel, cadastra os usuários, cria as demandas — tudo funcionando online.

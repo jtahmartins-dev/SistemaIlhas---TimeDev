@@ -16,6 +16,7 @@ export interface UserPublic {
   role: Role;
   ilha_id: number | null;
   avatar_url: string | null;
+  is_admin: boolean;
 }
 
 export interface Ilha {

@@ -88,7 +88,10 @@ export default function Island({ ilha, etapa, onClick, bloqueada, alternate, siz
           <ul>
             {ilha.membros.map((m) => (
               <li key={m.id}>
-                <span>{m.nome}</span>
+                <span>
+                  {m.nome}
+                  {m.is_admin && <span className="admin-pill" title="Admin (todas as ilhas)">admin</span>}
+                </span>
                 <span className="role">{ROLE_LABEL[m.role]}</span>
               </li>
             ))}

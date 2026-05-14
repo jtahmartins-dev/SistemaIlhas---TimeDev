@@ -23,6 +23,7 @@ class UserPublic(BaseModel):
     role: Role
     ilha_id: int | None = None
     avatar_url: str | None = None
+    is_admin: bool = False
 
 
 class UserCreate(BaseModel):
